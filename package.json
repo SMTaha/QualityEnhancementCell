@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "ng build && node server"
+    "server": "ng build && node server",
+    "postinstall": "ng build --aot -prod"
   },
   "repository": {
     "type": "git",
