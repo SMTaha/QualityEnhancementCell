@@ -5,7 +5,7 @@
   "scripts": {
     "build-package": "ng build -prod && node ./server/bin/exec",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng ./server/bin/exec",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
