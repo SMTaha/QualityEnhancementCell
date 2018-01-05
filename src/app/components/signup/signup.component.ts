@@ -45,6 +45,7 @@ export class SignupComponent implements OnInit{
     signUp(){
         if(this.validateCredentials){
             this.userCredentials.department = this.addDept(this.userCredentials.rollnumber);
+            this.userCredentials.rollnumber = this.userCredentials.rollnumber.toUpperCase();
             this.sharedService.postCall(SIGNUP_URL, this.userCredentials)
                 .subscribe(res => {
                     clearFields();

@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit{
                 delete this.userCredentials.rollnumber;
             }else{
                 delete this.userCredentials.email;
+                this.userCredentials.rollnumber = this.userCredentials.rollnumber.toUpperCase();
             }         
             this.sharedService.postCall(SIGNIN_URL, this.userCredentials)
                 .subscribe(res => {
